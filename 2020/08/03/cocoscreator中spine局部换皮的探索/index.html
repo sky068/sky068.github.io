@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://xujiawei.top">
   <title>cocoscreator中spine局部换皮的探索 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cocoscreator中spine局部换皮的探索1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选">
+  <meta name="description" content="1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选择进行切换attachment就行。优点：web、">
 <meta name="keywords" content="cocos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cocoscreator中spine局部换皮的探索">
 <meta property="og:url" content="https://xujiawei.top/2020/08/03/cocoscreator中spine局部换皮的探索/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="cocoscreator中spine局部换皮的探索1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选">
+<meta property="og:description" content="1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选择进行切换attachment就行。优点：web、">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-03T12:31:02.087Z">
+<meta property="og:updated_time" content="2020-08-04T02:47:56.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocoscreator中spine局部换皮的探索">
-<meta name="twitter:description" content="cocoscreator中spine局部换皮的探索1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选">
+<meta name="twitter:description" content="1、需求情况书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。 2、方案探索2.1 多attachment切换由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选择进行切换attachment就行。优点：web、">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -171,8 +171,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="cocoscreator中spine局部换皮的探索"><a href="#cocoscreator中spine局部换皮的探索" class="headerlink" title="cocoscreator中spine局部换皮的探索"></a>cocoscreator中spine局部换皮的探索</h1><h2 id="1、需求情况"><a href="#1、需求情况" class="headerlink" title="1、需求情况"></a>1、需求情况</h2><p>书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。</p>
+        <h2 id="1、需求情况"><a href="#1、需求情况" class="headerlink" title="1、需求情况"></a>1、需求情况</h2><p>书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。</p>
 <h2 id="2、方案探索"><a href="#2、方案探索" class="headerlink" title="2、方案探索"></a>2、方案探索</h2><h3 id="2-1-多attachment切换"><a href="#2-1-多attachment切换" class="headerlink" title="2.1 多attachment切换"></a>2.1 多attachment切换</h3><p>由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选择进行切换attachment就行。<br><strong>优点：web、native等多端统一代码。</strong><br><strong>缺点：随着可换装的部位越多、同一个部位皮肤越多，动画文件变得越来越大，由于spine动画文件是一次性加载进内存等，导致占用内存较多，实例化速度变慢。</strong></p>
+<a id="more"></a>
 <p>主要代码如下：</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 局部换装 skinname一般默认为default</span></span><br><span class="line">changePartialCloth(skeleton: sp.Skeleton, slotName: <span class="built_in">string</span>, targetSkinName:<span class="built_in">string</span>, targetAttaName:<span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="comment">// console.log('change cloth:', slotName, targetSkinName, targetAttaName);</span></span><br><span class="line">    <span class="keyword">const</span> slot = skeleton.findSlot(slotName);</span><br><span class="line">    <span class="keyword">const</span> skeletonData = skeleton.skeletonData.getRuntimeData();</span><br><span class="line">    <span class="keyword">const</span> skin = skeletonData.findSkin(targetSkinName);</span><br><span class="line">    <span class="keyword">const</span> slotIndex = skeletonData.findSlotIndex(slotName);</span><br><span class="line">    <span class="keyword">const</span> attachment = skin.getAttachment(slotIndex, targetAttaName);</span><br><span class="line">    <span class="keyword">if</span> (!slot || !attachment) &#123;</span><br><span class="line">        cc.error(slot &amp;&amp; attachment, <span class="string">"slots: "</span> + slotName + <span class="string">", attach: "</span> + targetAttaName + <span class="string">" not exists!"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    slot.setAttachment(attachment);</span><br><span class="line">    <span class="comment">// 如果spine使用了private或者shared等缓存模式，则需要更新缓存。</span></span><br><span class="line">    skeleton.invalidAnimationCache();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-2-使用外部图片更新局部皮肤"><a href="#2-2-使用外部图片更新局部皮肤" class="headerlink" title="2.2 使用外部图片更新局部皮肤"></a>2.2 使用外部图片更新局部皮肤</h3><p>由于attachemnt即是图片资源在spine内的表达，我们可以通过加载一张外部图片来更新attachment达到局部换装功能。<br><strong>优点：spine动画每个部位可以只做一个attachment，这样动画文件结构简单，体积较小，内存占用较小加载速度也较快。</strong><br><strong>缺点：一是由于引擎本身不提供此功能，需要自己动手实现，而且web端和native端需要两套代码，必须修改引擎代码并重新编译引擎。二是动画在使用realtime模式时修改一个动画会影响使用同一个动画文件创建的其他动画，这个问题还需要研究。</strong></p>
