@@ -17,7 +17,7 @@
 <meta property="og:description" content="二叉树的BFS和DFS是面试经常考察的问题，抽空整理了一下作备忘。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xujiawei.top/uploads/binarytree.png">
-<meta property="og:updated_time" content="2020-08-03T12:24:42.078Z">
+<meta property="og:updated_time" content="2020-08-14T10:17:04.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树的深度和广度搜索">
 <meta name="twitter:description" content="二叉树的BFS和DFS是面试经常考察的问题，抽空整理了一下作备忘。">
@@ -179,8 +179,7 @@
 <a id="more"></a>
 <p><img src="https://xujiawei.top/uploads/binarytree.png" alt="binarytree" style="zoom:50%;"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        self.val = x</span><br><span class="line">        self.left = <span class="keyword">None</span></span><br><span class="line">        self.right = <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
-<p>#####一、广度优先</p>
-<p>​    广度优先就是按照层进行搜索，可以利用队列的先进先出特性快捷实现</p>
+<h5 id="一、广度优先"><a href="#一、广度优先" class="headerlink" title="一、广度优先"></a>一、广度优先</h5><p>​    广度优先就是按照层进行搜索，可以利用队列的先进先出特性快捷实现</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs</span><span class="params">(treeRoot)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> treeRoot:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    queue = []</span><br><span class="line">    queue.append(treeRoot)</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">while</span> len(queue) != <span class="number">0</span>:</span><br><span class="line">        node = queue.pop(<span class="number">0</span>)</span><br><span class="line">        print(node.val)</span><br><span class="line">        <span class="keyword">if</span> node.left:</span><br><span class="line">            queue.append(node.left)</span><br><span class="line">        <span class="keyword">if</span> node.right:</span><br><span class="line">            queue.append(node.right)</span><br></pre></td></tr></table></figure>
 <h5 id="二、深度优先"><a href="#二、深度优先" class="headerlink" title="二、深度优先"></a>二、深度优先</h5><p>​    深度优先可以使用递归或者利用栈的后进先出特性</p>
 <ol>

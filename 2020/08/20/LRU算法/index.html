@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xujiawei.top">
-  <title>徐家伟的博客</title>
+  <title>LRU算法 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cocos手机游戏开发">
-<meta name="keywords" content="cocos, cocos2d-x, CocosCreator, 手机游戏开发, 移动开发, 游戏开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="徐家伟的博客">
-<meta property="og:url" content="https://xujiawei.top/index.html">
+  <meta name="description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LRU算法">
+<meta property="og:url" content="https://xujiawei.top/2020/08/20/LRU算法/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="cocos手机游戏开发">
+<meta property="og:description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-20T07:53:24.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="徐家伟的博客">
-<meta name="twitter:description" content="cocos手机游戏开发">
+<meta name="twitter:title" content="LRU算法">
+<meta name="twitter:description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -150,16 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-LRU算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-LRU算法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/20/LRU算法/">LRU算法</a>
+    <h1 class="article-title" itemprop="name">
+      LRU算法
     </h1>
   
 
@@ -175,155 +174,8 @@
         <blockquote>
 <p> leet code: 146<br> 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。<br> 它应该支持以下操作： 获取数据 get 和 写入数据 put 。<br> 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。<br> 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。<br> 当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间<br>    使用<strong>哈希表+双向链表</strong><br>    哈希表: 查询 O(1)<br>    双向链表: 有序, 增删操作 O(1)  </p>
 </blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/20/LRU算法/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cocoscreator中spine局部换皮的探索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/03/cocoscreator中spine局部换皮的探索/">cocoscreator中spine局部换皮的探索</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/03/cocoscreator中spine局部换皮的探索/" class="archive-article-date">
-  	<time datetime="2020-08-03T12:30:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1、需求情况"><a href="#1、需求情况" class="headerlink" title="1、需求情况"></a>1、需求情况</h2><p>书之国中需要一个人物捏脸系统，要求可以让用户自由选择身体不同部位的形象，比如头发、眼睛、眉毛、上衣、裤子等。</p>
-<h2 id="2、方案探索"><a href="#2、方案探索" class="headerlink" title="2、方案探索"></a>2、方案探索</h2><h3 id="2-1-多attachment切换"><a href="#2-1-多attachment切换" class="headerlink" title="2.1 多attachment切换"></a>2.1 多attachment切换</h3><p>由于spine动画的结构为bone→slot→attachment(即附件、图片)，我们可以在动画文件中针对同一个部位（同一个slot）下做多个attachment，然后根据用户的选择进行切换attachment就行。<br><strong>优点：web、native等多端统一代码。</strong><br><strong>缺点：随着可换装的部位越多、同一个部位皮肤越多，动画文件变得越来越大，由于spine动画文件是一次性加载进内存等，导致占用内存较多，实例化速度变慢。</strong></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cocos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/03/cocoscreator中spine局部换皮的探索/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-二叉树最大最小深度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/二叉树最大最小深度/">二叉树最大最小深度</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/二叉树最大最小深度/" class="archive-article-date">
-  	<time datetime="2020-05-20T10:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 二叉树的最大深度</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_deep</span><span class="params">(treeRoot)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> treeRoot:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> max(max_deep(treeRoot.left), max_deep(treeRoot.right)) + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 二叉树的最小深度</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">min_deep</span><span class="params">(treeRoot)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> treeRoot:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    left = min_deep(treeRoot.left)</span><br><span class="line">    right = min_deep(treeRoot.right)</span><br><span class="line">    <span class="keyword">if</span> left == <span class="number">0</span> <span class="keyword">or</span> right == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> left + right + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span>  min(left,right) + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">    leet code: 146</span></span><br><span class="line"><span class="string">    运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。</span></span><br><span class="line"><span class="string">    它应该支持以下操作： 获取数据 get 和 写入数据 put 。</span></span><br><span class="line"><span class="string">    获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。</span></span><br><span class="line"><span class="string">    写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。</span></span><br><span class="line"><span class="string">        当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间</span></span><br><span class="line"><span class="string">    哈希表+双向链表</span></span><br><span class="line"><span class="string">    哈希表: 查询 O(1)</span></span><br><span class="line"><span class="string">    双向链表: 有序, 增删操作 O(1)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DbListNode</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x, y)</span>:</span></span><br><span class="line">        self.key = x</span><br><span class="line">        self.val = y</span><br><span class="line">        self.next = <span class="keyword">None</span></span><br><span class="line">        self.prev = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, capacity: int)</span>:</span></span><br><span class="line">        self.cap = capacity</span><br><span class="line">        self.hkeys = &#123;&#125;</span><br><span class="line">        <span class="comment"># 哨兵节点，避免越界</span></span><br><span class="line">        self.top = DbListNode(<span class="keyword">None</span>, <span class="number">-1</span>)</span><br><span class="line">        self.tail = DbListNode(<span class="keyword">None</span>, <span class="number">-1</span>)</span><br><span class="line">        self.top.next = self.tail</span><br><span class="line">        self.tail.prev = self.top</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, key: int)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.hkeys:</span><br><span class="line">            <span class="comment"># 更新节点顺序</span></span><br><span class="line">            cur = self.hkeys[key]</span><br><span class="line">            cur.next.prev = cur.prev</span><br><span class="line">            cur.prev.next = cur.next</span><br><span class="line">            <span class="comment"># 最近用过的节点放到链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> self.hkeys[key].val</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">put</span><span class="params">(self, key: int, value: int)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.hkeys:</span><br><span class="line">            cur = self.hkeys[key]</span><br><span class="line">            cur.val = value</span><br><span class="line">            <span class="comment"># 跳出原位置</span></span><br><span class="line">            cur.prev.next = cur.next</span><br><span class="line">            cur.next.prev = cur.prev</span><br><span class="line"></span><br><span class="line">            <span class="comment">#最近用过的节点放到链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 增加新节点至首部</span></span><br><span class="line">            cur = DbListNode(key, value)</span><br><span class="line">            self.hkeys[key] = cur</span><br><span class="line">            <span class="comment"># 最近用过的节点置于链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur </span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> len(self.hkeys.keys()) &gt; self.cap:</span><br><span class="line">                <span class="comment"># 删除末尾的节点</span></span><br><span class="line">                self.hkeys.pop(self.tail.prev.key)</span><br><span class="line">                self.tail.prev.prev.next = self.tail</span><br><span class="line">                self.tail.prev = self.tail.prev.prev </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        vals = []</span><br><span class="line">        p = self.top.next</span><br><span class="line">        <span class="keyword">while</span> p.next:</span><br><span class="line">            vals.append(str(p.val))</span><br><span class="line">            p = p.next</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'-&gt;'</span>.join(vals)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    cache = LRUCache(<span class="number">2</span>)</span><br><span class="line">    cache.put(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">    cache.put(<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">1</span>)  <span class="comment"># 返回1</span></span><br><span class="line">    cache.put(<span class="number">3</span>,<span class="number">3</span>) <span class="comment"># 导致2作废</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">2</span>) <span class="comment"># 返回-1（未找到）</span></span><br><span class="line">    cache.put(<span class="number">4</span>,<span class="number">4</span>) <span class="comment"># 该操作导致1作废</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">1</span>) <span class="comment"># -1</span></span><br><span class="line">    cache.get(<span class="number">3</span>) <span class="comment"># 3</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">4</span>) <span class="comment"># 4</span></span><br><span class="line">    print(cache)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -346,16 +198,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/二叉树最大最小深度/">阅读全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/03/cocoscreator中spine局部换皮的探索/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cocoscreator中spine局部换皮的探索</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -375,549 +235,34 @@
 
 
 
-
   
-    <article id="post-二叉树的深度和广度搜索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+  <div id="gitalk-container"></div> 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '9ef6ebb2f4e0a128a53a',
+  	clientSecret: '1c9a2e0a64ff4a988023a6f3d533f2623f32a6a3',
+  	repo: 'gitalk',
+  	owner: 'sky068',
+  	admin: ['sky068'],
+  	id: decodeURI(location.pathname),
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/二叉树的深度和广度搜索/">二叉树的深度和广度搜索</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/二叉树的深度和广度搜索/" class="archive-article-date">
-  	<time datetime="2020-05-20T07:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>二叉树的BFS和DFS是面试经常考察的问题，抽空整理了一下作备忘。</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/二叉树的深度和广度搜索/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ptyhon一键生成所有icons" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/19/ptyhon一键生成所有icons/">ptyhon一键生成所有icons</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/19/ptyhon一键生成所有icons/" class="archive-article-date">
-  	<time datetime="2020-05-19T03:47:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>iOS的icon尺寸是越来越多了，每次都麻烦美工导出所有尺寸并正确命名有点麻烦（困难），这里使用python的pillow库一件生成，方便多了。代码如下:<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/19/ptyhon一键生成所有icons/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2048小游戏开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/2048小游戏开发/">2048小游戏开发</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/13/2048小游戏开发/" class="archive-article-date">
-  	<time datetime="2020-05-13T11:31:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="2048小游戏开发"><a href="#2048小游戏开发" class="headerlink" title="2048小游戏开发"></a>2048小游戏开发</h3><blockquote>
-<p>记得14年的时候吧，2040小游戏非常火爆，很多公司也做了个“升级版”，当时我们是使用cocos2d-x(c++)引擎进行开发的，各种换皮玩法。不过由于当时我也是个游戏开发新手，做出来的bug不少。这游戏虽然看着简单玩着也简单，但开发起来发现难点还是有的，比如cell移动动画，必须保证可以快速不间断的操作还得保证cell移动的位置都正确，还要保证新出现的cell位置正确。现在我们来用cocoscreator引擎实现一遍，顺便优化一下逻辑。</p>
-</blockquote>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/2048小游戏开发/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/二分查找/">二分查找</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/08/二分查找/" class="archive-article-date">
-  	<time datetime="2020-05-08T09:56:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = len(nums) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> target == nums[mid]:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> target &lt; nums[mid]:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/二分查找/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-好久不见-徐志摩" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/06/好久不见-徐志摩/">好久不见-徐志摩</a>
-    </h1>
-  
-
-        
-        <a href="/2019/06/06/好久不见-徐志摩/" class="archive-article-date">
-  	<time datetime="2019-06-06T11:02:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="徐志摩：好久不见（美到心碎）"><a href="#徐志摩：好久不见（美到心碎）" class="headerlink" title="徐志摩：好久不见（美到心碎）"></a>徐志摩：好久不见（美到心碎）</h5><p>01</p>
-<p>一生至少该有一次，</p>
-<p>为了某个人而忘了自己，</p>
-<p>不求有结果，不求同行，
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/06/好久不见-徐志摩/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CocosCreator引擎资源加载与释放原理简析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/">CocosCreator引擎资源加载与释放原理简析</a>
-    </h1>
-  
-
-        
-        <a href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/" class="archive-article-date">
-  	<time datetime="2019-06-06T09:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><a href="https://oedx.github.io/2019/03/14/brief-analysis-of-the-cocoscreator-engine-resource-loading-and-release-principle/" target="_blank" rel="noopener">原文链接：CocosCreator 引擎资源加载与释放原理简析</a></p>
-</blockquote>
-<p>本文主要内容如下：</p>
-<ol>
-<li>资源加载与释放部分代码所在</li>
-<li>调试、修改引擎源码的方法</li>
-<li>资源加载与释放原理简析</li>
-</ol>
-<p>如要了解 CocosCreator 引擎资源加载与释放的原理，调试、修改引擎代码有助于对其原理进行理解。因此文中会先介绍 CocosCreator 引擎各部分及其文件夹，然后介绍调试、修改引擎源码的方法，最后对其原理进行分析。
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cocos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-读书笔记《你只是看起来很努力》-李尚龙" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/">读书笔记《你只是看起来很努力》-李尚龙</a>
-    </h1>
-  
-
-        
-        <a href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/" class="archive-article-date">
-  	<time datetime="2019-06-06T07:51:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="青春时期总认为自己什么都知道，其实什么都不知道。"><a href="#青春时期总认为自己什么都知道，其实什么都不知道。" class="headerlink" title="青春时期总认为自己什么都知道，其实什么都不知道。"></a>青春时期总认为自己什么都知道，其实什么都不知道。</h5><blockquote>
-<p>纪伯伦说：”你无法同时拥有青春和关于青春的知识，因为青春忙于生计，没有余暇去求知，而只是忙于寻求自我，无法享受生活。”所以年轻就要轻狂一些，中年就要稳健一些，老了就要端庄一点。如果你年轻时不轻狂，老了又憋不住了，这就是耍流氓。</p>
-</blockquote>
-<p>​    2010年我在日记里写：”我们之所以会觉得焦虑，无非是因为现在的自己和想象中的自己，很有距离。”而我们离想象中的自己越走越远，很大程度上都是因为我们在一点点地辜负自己。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -940,8 +285,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
