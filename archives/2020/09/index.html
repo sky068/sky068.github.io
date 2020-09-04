@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xujiawei.top">
-  <title>LRU算法 | 徐家伟的博客</title>
+  <title>Archives: 2020/9 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
-<meta name="keywords" content="算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LRU算法">
-<meta property="og:url" content="https://xujiawei.top/2020/08/20/LRU算法/index.html">
+  <meta name="description" content="cocos手机游戏开发">
+<meta name="keywords" content="cocos, cocos2d-x, CocosCreator, 手机游戏开发, 移动开发, 游戏开发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="徐家伟的博客">
+<meta property="og:url" content="https://xujiawei.top/archives/2020/09/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
+<meta property="og:description" content="cocos手机游戏开发">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-20T07:53:24.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LRU算法">
-<meta name="twitter:description" content="leet code: 146 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。 它应该支持以下操作： 获取数据 get 和 写入数据 put 。 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。 当缓存容量达到上限时，它应">
+<meta name="twitter:title" content="徐家伟的博客">
+<meta name="twitter:description" content="cocos手机游戏开发">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -151,39 +150,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-LRU算法" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      LRU算法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/09/04/跳表/" class="archive-article-date">
+  	<time datetime="2020-09-04T08:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/09/04/跳表/">跳表</a>
     </h1>
   
 
-        
-        <a href="/2020/08/20/LRU算法/" class="archive-article-date">
-  	<time datetime="2020-08-20T07:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p> leet code: 146<br> 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。<br> 它应该支持以下操作： 获取数据 get 和 写入数据 put 。<br> 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。<br> 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。<br> 当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间<br>    使用<strong>哈希表+双向链表</strong><br>    哈希表: 查询 O(1)<br>    双向链表: 有序, 增删操作 O(1)  </p>
-</blockquote>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">    leet code: 146</span></span><br><span class="line"><span class="string">    运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。</span></span><br><span class="line"><span class="string">    它应该支持以下操作： 获取数据 get 和 写入数据 put 。</span></span><br><span class="line"><span class="string">    获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。</span></span><br><span class="line"><span class="string">    写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。</span></span><br><span class="line"><span class="string">        当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间</span></span><br><span class="line"><span class="string">    哈希表+双向链表</span></span><br><span class="line"><span class="string">    哈希表: 查询 O(1)</span></span><br><span class="line"><span class="string">    双向链表: 有序, 增删操作 O(1)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DbListNode</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, x, y)</span>:</span></span><br><span class="line">        self.key = x</span><br><span class="line">        self.val = y</span><br><span class="line">        self.next = <span class="keyword">None</span></span><br><span class="line">        self.prev = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, capacity: int)</span>:</span></span><br><span class="line">        self.cap = capacity</span><br><span class="line">        self.hkeys = &#123;&#125;</span><br><span class="line">        <span class="comment"># 哨兵节点，避免越界</span></span><br><span class="line">        self.top = DbListNode(<span class="keyword">None</span>, <span class="number">-1</span>)</span><br><span class="line">        self.tail = DbListNode(<span class="keyword">None</span>, <span class="number">-1</span>)</span><br><span class="line">        self.top.next = self.tail</span><br><span class="line">        self.tail.prev = self.top</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, key: int)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.hkeys:</span><br><span class="line">            <span class="comment"># 更新节点顺序</span></span><br><span class="line">            cur = self.hkeys[key]</span><br><span class="line">            cur.next.prev = cur.prev</span><br><span class="line">            cur.prev.next = cur.next</span><br><span class="line">            <span class="comment"># 最近用过的节点放到链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> self.hkeys[key].val</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">put</span><span class="params">(self, key: int, value: int)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.hkeys:</span><br><span class="line">            cur = self.hkeys[key]</span><br><span class="line">            cur.val = value</span><br><span class="line">            <span class="comment"># 跳出原位置</span></span><br><span class="line">            cur.prev.next = cur.next</span><br><span class="line">            cur.next.prev = cur.prev</span><br><span class="line"></span><br><span class="line">            <span class="comment">#最近用过的节点放到链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 增加新节点至首部</span></span><br><span class="line">            cur = DbListNode(key, value)</span><br><span class="line">            self.hkeys[key] = cur</span><br><span class="line">            <span class="comment"># 最近用过的节点置于链表首部</span></span><br><span class="line">            top_node = self.top.next</span><br><span class="line">            self.top.next = cur</span><br><span class="line">            cur.prev = self.top</span><br><span class="line">            cur.next = top_node</span><br><span class="line">            top_node.prev = cur </span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> len(self.hkeys.keys()) &gt; self.cap:</span><br><span class="line">                <span class="comment"># 删除末尾的节点</span></span><br><span class="line">                self.hkeys.pop(self.tail.prev.key)</span><br><span class="line">                self.tail.prev.prev.next = self.tail</span><br><span class="line">                self.tail.prev = self.tail.prev.prev </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        vals = []</span><br><span class="line">        p = self.top.next</span><br><span class="line">        <span class="keyword">while</span> p.next:</span><br><span class="line">            vals.append(str(p.val))</span><br><span class="line">            p = p.next</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'-&gt;'</span>.join(vals)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    cache = LRUCache(<span class="number">2</span>)</span><br><span class="line">    cache.put(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">    cache.put(<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">1</span>)  <span class="comment"># 返回1</span></span><br><span class="line">    cache.put(<span class="number">3</span>,<span class="number">3</span>) <span class="comment"># 导致2作废</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">2</span>) <span class="comment"># 返回-1（未找到）</span></span><br><span class="line">    cache.put(<span class="number">4</span>,<span class="number">4</span>) <span class="comment"># 该操作导致1作废</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">1</span>) <span class="comment"># -1</span></span><br><span class="line">    cache.get(<span class="number">3</span>) <span class="comment"># 3</span></span><br><span class="line">    print(cache)</span><br><span class="line">    cache.get(<span class="number">4</span>) <span class="comment"># 4</span></span><br><span class="line">    print(cache)</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,84 +191,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/21/队列有关基础算法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          队列有关基础算法“ 
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/03/cocoscreator中spine局部换皮的探索/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cocoscreator中spine局部换皮的探索</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  <div id="gitalk-container"></div> 
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script>
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '9ef6ebb2f4e0a128a53a',
-  	clientSecret: '1c9a2e0a64ff4a988023a6f3d533f2623f32a6a3',
-  	repo: 'gitalk',
-  	owner: 'sky068',
-  	admin: ['sky068'],
-  	id: decodeURI(location.pathname),
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
+    </div></section>
   
 
-  
-  
-  
-
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -295,8 +226,8 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
