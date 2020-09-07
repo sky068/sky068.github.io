@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xujiawei.top">
-  <title>Archives: 2019/6 | 徐家伟的博客</title>
+  <title>线性排序之桶排序 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cocos手机游戏开发">
-<meta name="keywords" content="cocos, cocos2d-x, CocosCreator, 手机游戏开发, 移动开发, 游戏开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="徐家伟的博客">
-<meta property="og:url" content="https://xujiawei.top/archives/2019/06/index.html">
+  <meta name="description" content="桶排序，顾名思义，会用到“桶”，核心思想是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序。桶内排完序之后，再把每个桶里的数据按照顺序依次取出，组成的序列就是有序的了。 如果要排序的数据有 n 个，我们把它们均匀地划分到 m 个桶内，每个桶里就有 k=n/m 个元素。每个桶内部使用快速排序，时间复杂度为 O(k  logk)。m 个桶排序的时间复杂度就是 O(m  k  logk)，">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性排序之桶排序">
+<meta property="og:url" content="https://xujiawei.top/2020/09/07/线性排序算法之桶排序/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="cocos手机游戏开发">
+<meta property="og:description" content="桶排序，顾名思义，会用到“桶”，核心思想是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序。桶内排完序之后，再把每个桶里的数据按照顺序依次取出，组成的序列就是有序的了。 如果要排序的数据有 n 个，我们把它们均匀地划分到 m 个桶内，每个桶里就有 k=n/m 个元素。每个桶内部使用快速排序，时间复杂度为 O(k  logk)。m 个桶排序的时间复杂度就是 O(m  k  logk)，">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-07T06:21:14.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="徐家伟的博客">
-<meta name="twitter:description" content="cocos手机游戏开发">
+<meta name="twitter:title" content="线性排序之桶排序">
+<meta name="twitter:description" content="桶排序，顾名思义，会用到“桶”，核心思想是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序。桶内排完序之后，再把每个桶里的数据按照顺序依次取出，组成的序列就是有序的了。 如果要排序的数据有 n 个，我们把它们均匀地划分到 m 个桶内，每个桶里就有 k=n/m 个元素。每个桶内部使用快速排序，时间复杂度为 O(k  logk)。m 个桶排序的时间复杂度就是 O(m  k  logk)，">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -150,136 +151,126 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-线性排序算法之桶排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      线性排序之桶排序
+    </h1>
+  
+
+        
+        <a href="/2020/09/07/线性排序算法之桶排序/" class="archive-article-date">
+  	<time datetime="2020-09-07T05:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>桶排序，顾名思义，会用到“桶”，核心思想是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序。桶内排完序之后，再把每个桶里的数据按照顺序依次取出，组成的序列就是有序的了。 如果要排序的数据有 n 个，我们把它们均匀地划分到 m 个桶内，每个桶里就有 k=n/m 个元素。每个桶内部使用快速排序，时间复杂度为 O(k <em> logk)。m 个桶排序的时间复杂度就是 O(m </em> k <em> logk)，因为 k=n/m，所以整个桶排序的时间复杂度就是 O(n</em>log(n/m))。当桶的个数 m 接近数据个数 n 时，log(n/m) 就是一个非常小的常量，这个时候桶排序的时间复杂度接近 O(n)。如果数据经过桶的划分之后，有些桶里的数据非常多，有些非常少，很不平均，那桶内数据排序的时间复杂度就不是常量级了。在极端情况下，如果数据都被划分到一个桶里，那就退化为 O(nlogn) 的排序算法了.</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 桶排序 适合处理数据量大但数值范围分布均匀的数据，适合外部排序</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BucketSort</span><span class="params">(object)</span>:</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bucketSort</span><span class="params">(arr:List[int], bucketSize: int)</span>:</span> </span><br><span class="line">        <span class="keyword">if</span> len(arr) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 找出最大最小值</span></span><br><span class="line">        minValue = arr[<span class="number">0</span>]</span><br><span class="line">        maxValue = arr[len(arr) - <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> (arr):</span><br><span class="line">            <span class="keyword">if</span> i &lt; minValue:</span><br><span class="line">                minValue = i</span><br><span class="line">            <span class="keyword">elif</span> i &gt; maxValue:</span><br><span class="line">                maxValue = i</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 桶数量</span></span><br><span class="line">        bucketCount = (maxValue - minValue) // bucketSize + <span class="number">1</span></span><br><span class="line">        <span class="comment"># buckets = [[None for col in range(bucketSize)] for row in range(bucketCount)]</span></span><br><span class="line">        buckets = [[] <span class="keyword">for</span> row <span class="keyword">in</span> range(bucketCount)]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 记录每个桶存入的元素数量</span></span><br><span class="line">        indexArr = [<span class="number">0</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(bucketCount)] </span><br><span class="line"></span><br><span class="line">        <span class="comment"># 将数组值均匀的分到各个桶内</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr)):</span><br><span class="line">            bucketIndex = (arr[i] - minValue) // bucketSize</span><br><span class="line">            <span class="comment"># 数组满了要扩容</span></span><br><span class="line">            <span class="comment"># if indexArr[bucketIndex] == len(buckets[bucketIndex]):</span></span><br><span class="line">            <span class="comment">#     pass</span></span><br><span class="line">            buckets[bucketIndex].append(arr[i])</span><br><span class="line">            indexArr[bucketIndex] += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 对每个桶进行排序，一般用快速排序</span></span><br><span class="line">        k = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> subArr <span class="keyword">in</span> buckets:</span><br><span class="line">            l = len(subArr)</span><br><span class="line">            <span class="keyword">if</span> l == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            BucketSort.quickSortC(subArr, <span class="number">0</span>, l - <span class="number">1</span>)</span><br><span class="line">            arr[k:(k + l)] = subArr[<span class="number">0</span>:l]</span><br><span class="line">            k = k + l</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 快排递归函数</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">quickSortC</span><span class="params">(arr, low, high)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> low &gt;= high:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">        mid = BucketSort.partition(arr, low, high)</span><br><span class="line">        BucketSort.quickSortC(arr, low, mid<span class="number">-1</span>)</span><br><span class="line">        BucketSort.quickSortC(arr, mid+<span class="number">1</span>, high)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 快排分区函数</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(arr, low, high)</span>:</span></span><br><span class="line">        pivot = arr[high]</span><br><span class="line">        i = low</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(low, high):</span><br><span class="line">            <span class="keyword">if</span> arr[j] &lt; pivot:</span><br><span class="line">                arr[i], arr[j] = arr[j], arr[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">        <span class="comment"># swap</span></span><br><span class="line">        arr[i], arr[high] = arr[high], arr[i]</span><br><span class="line">        <span class="keyword">return</span> i</span><br><span class="line">       </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">    print(arr)</span><br><span class="line">    BucketSort.bucketSort(arr, <span class="number">5</span>)</span><br><span class="line">    print(arr)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/好久不见-徐志摩/" class="archive-article-date">
-  	<time datetime="2019-06-06T11:02:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/好久不见-徐志摩/">好久不见-徐志摩</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/" class="archive-article-date">
-  	<time datetime="2019-06-06T09:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/09/07/线性排序算法之计数排序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          线性排序算法之计数排序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/04/跳表/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跳表</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/">CocosCreator引擎资源加载与释放原理简析</a>
-    </h1>
+  <div id="gitalk-container"></div> 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '9ef6ebb2f4e0a128a53a',
+  	clientSecret: '1c9a2e0a64ff4a988023a6f3d533f2623f32a6a3',
+  	repo: 'gitalk',
+  	owner: 'sky068',
+  	admin: ['sky068'],
+  	id: decodeURI(location.pathname),
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cocos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/" class="archive-article-date">
-  	<time datetime="2019-06-06T07:51:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/">读书笔记《你只是看起来很努力》-李尚龙</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -302,8 +293,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xujiawei.top">
-  <title>Archives: 2019/6 | 徐家伟的博客</title>
+  <title>线性排序算法之基数排序 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="cocos手机游戏开发">
-<meta name="keywords" content="cocos, cocos2d-x, CocosCreator, 手机游戏开发, 移动开发, 游戏开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="徐家伟的博客">
-<meta property="og:url" content="https://xujiawei.top/archives/2019/06/index.html">
+  <meta name="description" content="基数排序也是一种特殊的计数或者桶排序，比如有10万个手机号码从小到大排序，如果用桶排序则数值范围太大了显然不合适，这里我们可以对没一位进行计数排序（每一位数值范围都是0-9范围小很多），利用稳定的排序这样进行11次之后则完成排序，这里的基数则指每次排的那一位。基数排序的时间复杂度为O(k*n), 当k不大的时候，比如手机号排序，则时间复杂度接近于O(n).">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性排序算法之基数排序">
+<meta property="og:url" content="https://xujiawei.top/2020/09/07/线性排序算法之基数排序/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="cocos手机游戏开发">
+<meta property="og:description" content="基数排序也是一种特殊的计数或者桶排序，比如有10万个手机号码从小到大排序，如果用桶排序则数值范围太大了显然不合适，这里我们可以对没一位进行计数排序（每一位数值范围都是0-9范围小很多），利用稳定的排序这样进行11次之后则完成排序，这里的基数则指每次排的那一位。基数排序的时间复杂度为O(k*n), 当k不大的时候，比如手机号排序，则时间复杂度接近于O(n).">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-07T06:21:03.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="徐家伟的博客">
-<meta name="twitter:description" content="cocos手机游戏开发">
+<meta name="twitter:title" content="线性排序算法之基数排序">
+<meta name="twitter:description" content="基数排序也是一种特殊的计数或者桶排序，比如有10万个手机号码从小到大排序，如果用桶排序则数值范围太大了显然不合适，这里我们可以对没一位进行计数排序（每一位数值范围都是0-9范围小很多），利用稳定的排序这样进行11次之后则完成排序，这里的基数则指每次排的那一位。基数排序的时间复杂度为O(k*n), 当k不大的时候，比如手机号排序，则时间复杂度接近于O(n).">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -150,136 +151,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-线性排序算法之基数排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      线性排序算法之基数排序
+    </h1>
+  
+
+        
+        <a href="/2020/09/07/线性排序算法之基数排序/" class="archive-article-date">
+  	<time datetime="2020-09-07T06:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基数排序也是一种特殊的计数或者桶排序，比如有10万个手机号码从小到大排序，如果用桶排序则数值范围太大了显然不合适，这里我们可以对没一位进行计数排序（每一位数值范围都是0-9范围小很多），利用稳定的排序这样进行11次之后则完成排序，这里的基数则指每次排的那一位。基数排序的时间复杂度为O(k*n), 当k不大的时候，比如手机号排序，则时间复杂度接近于O(n).</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基数排序</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">基数排序对要排序的数据是有要求的，需要可以分割出独立的“位”来比较，而且位之间有递进的关系，</span></span><br><span class="line"><span class="string">如果 a 数据的高位比 b 数据大，那剩下的低位就不用比较了。除此之外，每一位的数据范围不能太大，</span></span><br><span class="line"><span class="string">要可以用线性排序算法来排序，否则，基数排序的时间复杂度就无法做到 O(n) 了</span></span><br><span class="line"><span class="string">比如排序11位的手机号码，可以对每一位一次进行计数排序，这样进行11次后就是有序的了</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> List</span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RadixSort</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">radixSort</span><span class="params">(arr: List[int])</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(arr) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        maxValue = max(arr)</span><br><span class="line">        <span class="comment"># 从个位开始，对数组进行按‘位’进行排序</span></span><br><span class="line">        exp = <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> (maxValue // exp) &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="comment"># 开始用计数排序对某一位排序</span></span><br><span class="line">            RadixSort.countingSort(arr, exp)</span><br><span class="line">            exp *= <span class="number">10</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 这里arr的元素范围为0-9, 所以10个桶就够了</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countingSort</span><span class="params">(arr, exp)</span>:</span></span><br><span class="line">        c = [<span class="number">0</span>] * <span class="number">10</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> arr:</span><br><span class="line">            <span class="comment"># 获取当前应该比较的一位(比如个位、十位)</span></span><br><span class="line">            e = (i // exp) % <span class="number">10</span></span><br><span class="line">            c[e] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 计算排序后的位置</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(c)):</span><br><span class="line">            c[i] = c[i] + c[i - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 临时数组，存储排序后的结果</span></span><br><span class="line">        r = [<span class="keyword">None</span>] * len(arr)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr)<span class="number">-1</span>, <span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">            pos = c[(arr[i] // exp) % <span class="number">10</span>] </span><br><span class="line">            r[pos<span class="number">-1</span>] = arr[i]</span><br><span class="line">            c[(arr[i] // exp) % <span class="number">10</span>] -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 将结果拷贝到原数组</span></span><br><span class="line">        arr[:] = r[:]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    arr = [<span class="number">135</span>, <span class="number">542</span>, <span class="number">5487</span>, <span class="number">125</span>, <span class="number">111</span>, <span class="number">9</span>, <span class="number">251</span>, <span class="number">221</span>, <span class="number">102</span>, <span class="number">105</span>, <span class="number">951</span>, <span class="number">100</span>, <span class="number">88</span>, <span class="number">67</span>]</span><br><span class="line">    print(arr)</span><br><span class="line">    RadixSort.radixSort(arr)</span><br><span class="line">    print(arr)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/好久不见-徐志摩/" class="archive-article-date">
-  	<time datetime="2019-06-06T11:02:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/好久不见-徐志摩/">好久不见-徐志摩</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/" class="archive-article-date">
-  	<time datetime="2019-06-06T09:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/07/线性排序算法之计数排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">线性排序算法之计数排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/CocosCreator引擎资源加载与释放原理简析/">CocosCreator引擎资源加载与释放原理简析</a>
-    </h1>
+  <div id="gitalk-container"></div> 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '9ef6ebb2f4e0a128a53a',
+  	clientSecret: '1c9a2e0a64ff4a988023a6f3d533f2623f32a6a3',
+  	repo: 'gitalk',
+  	owner: 'sky068',
+  	admin: ['sky068'],
+  	id: decodeURI(location.pathname),
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cocos</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/" class="archive-article-date">
-  	<time datetime="2019-06-06T07:51:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/06/读书笔记《你只是看起来很努力》-李尚龙/">读书笔记《你只是看起来很努力》-李尚龙</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -302,8 +284,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
