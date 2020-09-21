@@ -17,7 +17,7 @@
 <meta property="og:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xujiawei.top/uploads/cocos_ios.png">
-<meta property="og:updated_time" content="2020-09-21T09:54:24.653Z">
+<meta property="og:updated_time" content="2020-09-21T09:58:06.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS原生集成cocoscreator">
 <meta name="twitter:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
