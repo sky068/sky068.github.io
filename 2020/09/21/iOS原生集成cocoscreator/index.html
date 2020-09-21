@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="徐家伟的博客">
 <meta property="og:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-21T09:42:57.187Z">
+<meta property="og:image" content="https://xujiawei.top/uploads/cocos_ios.png">
+<meta property="og:updated_time" content="2020-09-21T09:47:32.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS原生集成cocoscreator">
 <meta name="twitter:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
+<meta name="twitter:image" content="https://xujiawei.top/uploads/cocos_ios.png">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -180,6 +182,7 @@
 </li>
 <li><p>打开iOS原生工程，工程根目录导入<strong>cocos</strong>下的文件和文件夹，这里要<em><u>注意文件夹的黄色（group）和蓝色（fold references)</u></em>区别。以蓝色fold references导入assets，以黄色group模式导入ios、Classes文件夹以及cocos2d_libs.xcodeproj，新建一个名为Resources的group，并以fold references模式导入main.js、project.json、src、jsb-adapter到其中。完成后到目录结构如下：</p>
 <p>![<a href="https://xujiawei.top/uploads/cocos_ios.png">https://xujiawei.top/uploads/cocos_ios.png</a>)</p>
+<p><img src="https://xujiawei.top/uploads/cocos_ios.png" alt></p>
 </li>
 <li><p>把cocos导出的iOS工程里所用到的frameworks全部导入到原生iOS工程</p>
 </li>
