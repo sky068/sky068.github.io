@@ -17,7 +17,7 @@
 <meta property="og:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xujiawei.top/uploads/cocos_ios.png">
-<meta property="og:updated_time" content="2020-09-21T09:47:32.808Z">
+<meta property="og:updated_time" content="2020-09-21T09:48:15.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS原生集成cocoscreator">
 <meta name="twitter:description" content="游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下">
@@ -176,6 +176,7 @@
         <blockquote>
 <p>游戏项目使用cocoscreator 2.4.0版本，发布iOS工程后集成到iOS原生工程，中途发现v8引擎在一个进程中只能初始化一次，导致退出游戏销毁引擎实例并释放资源后无法再次打开游戏，遂采用单例模式，每次退出游戏时只跳转到空场景然后释放资源并停止游戏主循环并不销毁引擎实例（注意，这里一定要跳转到空场景再释放资源，如果在游戏场景释放可能不及时，导致返回app时内存没有回落），这样做的好处是下次进入游戏比较快而且稳定，坏处就是退出游戏返回app时要多占用90M左右的内存。</p>
 </blockquote>
+<a id="more"></a>
 <p>cocos的iOS工程其实就是创建了一个RootViewController，并设置view为CCEAGLView，然后把这个RootViewController设置给window进行加载显示，同时初始化引擎并开始运行游戏。我们这里要做的就是创建一个GameViewController来替换cocos的RootViewController, 然后在原生iOS工程中通过按钮或者其他操作来加载显示我们的GameViewController并启动引擎，当关闭游戏时，我们移除GameViewController并停止引擎主循环（注意，不要销毁), 下次进入游戏时再次加载显示GameViewController并重启游戏即可。</p>
 <h3 id="一、导入cocos-工程相关文件到原生iOS工程"><a href="#一、导入cocos-工程相关文件到原生iOS工程" class="headerlink" title="一、导入cocos 工程相关文件到原生iOS工程"></a>一、导入cocos 工程相关文件到原生iOS工程</h3><ol>
 <li><p>在原生iOS工程文件夹里新建一个<strong>cocos</strong>文件夹，并把<strong>cocos</strong>导出的iOS工程里的<strong>assets</strong>、<strong>src</strong>、<strong>main.js</strong>、<strong>jsb-adapter</strong>、<strong>project.json</strong>、<strong>frameworks</strong>拷贝进去。</p>
