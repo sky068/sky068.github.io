@@ -195,7 +195,7 @@
 <p>其中 engine 文件夹下代码部分包含了引擎的 JS 层逻辑，而引擎的资源加载与释放部分代码就处于此文件夹中，路径为 <strong>cocos2d/core/load-pipeline/</strong>，主要涉及 <strong>pipeline.js</strong>、<strong>loading-items.js</strong>、<strong>CCLoader.js</strong>、<strong>loader.js</strong>、<strong>uuid-loader.js</strong> 等文件。<br>另外，需要了解的是 CocosCreator 引擎中资源是有依赖关系的，比如 <strong>SpriteAtlas</strong> 资源的加载会依赖于多个 <strong>SpriteFrame</strong> 资源的加载，而 <strong>SpriteFrame</strong> 资源依赖于 <strong>Texture2D</strong> 资源。下边对调试、修改引擎代码做简单介绍。</p>
 <h2 id="调试、修改引擎代码"><a href="#调试、修改引擎代码" class="headerlink" title="调试、修改引擎代码"></a>调试、修改引擎代码</h2><p>   1.找到 CocosCreator 的 JavaScript 引擎所在目录 <strong>CocosCreator.app/Resource/engine</strong>，将该文件夹复制到其他地方，我们将对复制后的代码进行调试和修改。然后在 CocosCreator 的项目设置中修改 JavaScript 引擎路径为复制后的路径。如果要调试 Cocos2d-x 部分，修改对应文件夹即可。如下图：<br>      <img src="https://blog-pic-1251295613.cos.ap-guangzhou.myqcloud.com/1552547553.94SmartPic.png" alt="定义 JavaScript 引擎路径"></p>
 <p>   2.运行以下命令安装编译依赖    </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在命令行中进入引擎路径    </span></span><br><span class="line">cd [engine_path]/engine    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装 gulp 构建工具    </span></span><br><span class="line">npm install -g gulp    </span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装依赖的模块    </span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 在命令行中进入引擎路径    </span><br><span class="line">cd [engine_path]/engine    </span><br><span class="line"><span class="meta">#</span> 安装 gulp 构建工具    </span><br><span class="line">npm install -g gulp    </span><br><span class="line"><span class="meta">#</span> 安装依赖的模块    </span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <p>   3.现在可以打开文件夹，对 JS 引擎部分进行修改。修改后，在该文件夹下运行 <strong>gulp build</strong> 命令即可编译修改的部分，然后刷新 CocosCreator 预览的网页即可</p>
 <p>   4.至于调试其源码，可以直接在 Chrome 开发者工具中 Cmd + o （Mac 快捷键）呼出搜索框，输入并打开你需要调试的文件，然后即可打断点进行调试</p>
 <h2 id="CocosCreator-引擎资源加载与释放简析"><a href="#CocosCreator-引擎资源加载与释放简析" class="headerlink" title="CocosCreator 引擎资源加载与释放简析"></a>CocosCreator 引擎资源加载与释放简析</h2><h3 id="资源加载"><a href="#资源加载" class="headerlink" title="资源加载"></a>资源加载</h3><p>概括来讲，CCLoader 是供上层直接使用加载、释放资源的类，整合、封装了 <strong>pipeline、loading-items、loader</strong> 等类；<strong>pipeline</strong> 包含多个 <strong>pipe</strong>，这里的 <strong>pipe</strong> 是指实现了加载资源的单位（如 <strong>loader</strong>），<strong>pipeline</strong> 对资源的处理最终是调用 <strong>pipe.handle</strong> 实现的，<strong>pipeline</strong> 自身实现的是资源缓存和让资源依次流过管道，即每个资源依次经过每个 <strong>pipe</strong> 的处理；<strong>loading-items</strong> 配合 <strong>pipeline</strong>，实现了加载状态维护、依赖资源入队等内容；<strong>asset-loader、downloader、loader</strong> 则实现了资源加载具体功能，不同的加载器负责不同资源的加载。</p>
@@ -443,19 +443,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">游戏开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">游戏开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
