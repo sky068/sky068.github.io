@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xujiawei.top">
-  <title>经典排序算法之快速排序 | 徐家伟的博客</title>
+  <title>cocoscreator 支持ttf字体字间距设置 | 徐家伟的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速排序就是通过一趟排序将原数据分成两部分，其中一部分关键字都比另一部分小，接下来再对这两部分分别使用快速排序，这里有递归的思想。快速排序的平均时间复杂度为O(nlgn)，所以适合数据量较大的情况，但快排需要频繁的对数据位置的操作，故不适合链式存储数据。">
-<meta name="keywords" content="算法">
+  <meta name="description" content="label在native端是通过CanvasRenderingContext2D进行渲染的，iOS下使用NSAttributedString进行渲染绘制，android下使用TextPaint来进行渲染，所以我们需要分别修改iOS和安卓下的代码。">
+<meta name="keywords" content="游戏开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典排序算法之快速排序">
-<meta property="og:url" content="https://xujiawei.top/2019/02/21/经典排序算法之快速排序/index.html">
+<meta property="og:title" content="cocoscreator 支持ttf字体字间距设置">
+<meta property="og:url" content="https://xujiawei.top/2021/08/17/cocoscreator-支持ttf字体字间距设置/index.html">
 <meta property="og:site_name" content="徐家伟的博客">
-<meta property="og:description" content="快速排序就是通过一趟排序将原数据分成两部分，其中一部分关键字都比另一部分小，接下来再对这两部分分别使用快速排序，这里有递归的思想。快速排序的平均时间复杂度为O(nlgn)，所以适合数据量较大的情况，但快排需要频繁的对数据位置的操作，故不适合链式存储数据。">
+<meta property="og:description" content="label在native端是通过CanvasRenderingContext2D进行渲染的，iOS下使用NSAttributedString进行渲染绘制，android下使用TextPaint来进行渲染，所以我们需要分别修改iOS和安卓下的代码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-03T12:24:42.000Z">
+<meta property="og:updated_time" content="2021-08-17T04:26:44.891Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典排序算法之快速排序">
-<meta name="twitter:description" content="快速排序就是通过一趟排序将原数据分成两部分，其中一部分关键字都比另一部分小，接下来再对这两部分分别使用快速排序，这里有递归的思想。快速排序的平均时间复杂度为O(nlgn)，所以适合数据量较大的情况，但快排需要频繁的对数据位置的操作，故不适合链式存储数据。">
+<meta name="twitter:title" content="cocoscreator 支持ttf字体字间距设置">
+<meta name="twitter:description" content="label在native端是通过CanvasRenderingContext2D进行渲染的，iOS下使用NSAttributedString进行渲染绘制，android下使用TextPaint来进行渲染，所以我们需要分别修改iOS和安卓下的代码。">
   
     <link rel="alternative" href="/atom.xml" title="徐家伟的博客" type="application/atom+xml">
   
@@ -151,62 +151,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-经典排序算法之快速排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cocoscreator-支持ttf字体字间距设置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      经典排序算法之快速排序
+      cocoscreator 支持ttf字体字间距设置
     </h1>
   
 
         
-        <a href="/2019/02/21/经典排序算法之快速排序/" class="archive-article-date">
-  	<time datetime="2019-02-21T10:10:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-21</time>
+        <a href="/2021/08/17/cocoscreator-支持ttf字体字间距设置/" class="archive-article-date">
+  	<time datetime="2021-08-17T03:44:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>快速排序就是通过一趟排序将原数据分成两部分，其中一部分关键字都比另一部分小，接下来再对这两部分分别使用快速排序，这里有递归的思想。快速排序的平均时间复杂度为O(nlgn)，所以适合数据量较大的情况，但快排需要频繁的对数据位置的操作，故不适合链式存储数据。<br><a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortQuick</span>(<span class="params">arr, start, end</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (start &gt;= end) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> low = start;</span><br><span class="line">    <span class="keyword">let</span> high = end;</span><br><span class="line">    <span class="keyword">let</span> key = arr[low];</span><br><span class="line">    <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">        <span class="keyword">while</span> (low &lt; high &amp;&amp; arr[high] &gt;= key) &#123;</span><br><span class="line">            --high;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[low] = arr[high];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (low &lt; high &amp;&amp; arr[low] &lt;= key) &#123;</span><br><span class="line">            ++low;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[high] = arr[low];</span><br><span class="line">    &#125;</span><br><span class="line">    arr[low] = key;</span><br><span class="line"></span><br><span class="line">    sortQuick(arr, start, low - <span class="number">1</span>);</span><br><span class="line">    sortQuick(arr, low + <span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>label在native端是通过<strong>CanvasRenderingContext2D</strong>进行渲染的，iOS下使用<strong>NSAttributedString</strong>进行渲染绘制，<strong>android</strong>下使用<strong>TextPaint</strong>来进行渲染，所以我们需要分别修改iOS和安卓下的代码。<a id="more"></a></p>
+<h3 id="一、修改引擎源码"><a href="#一、修改引擎源码" class="headerlink" title="一、修改引擎源码"></a>一、修改引擎源码</h3><p>首先在<figure class="highlight plain"><figcaption><span>cocos2d-x/cocos/platform/CCCanvasRenderingContext2D.h)下添加一个设置字间距的方法：```void setWordSpace(float space)```;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">iOS平台在```CCCanvasRenderingContext2D-apple.mm```(目录: cocos2d-x/cocos/platform/apple/CCCanvasRenderingContext2D-apple.mm )文件下实现该方法，内容如下:</span><br><span class="line"></span><br><span class="line">```c++</span><br><span class="line">void CanvasRenderingContext2D::setWordSpace(float space) &#123;</span><br><span class="line">    NSLog(@&quot;wordSpace: %.1f&quot;, space);</span><br><span class="line">    NSNumber *okern = [[NSNumber alloc] initWithFloat: space];</span><br><span class="line">    // 设置字间距</span><br><span class="line">    [_impl.tokenAttributesDict setObject:okern forKey:NSKernAttributeName];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>android平台是通过jni实现c++调用java的，首先在C++代码文件<figure class="highlight plain"><figcaption><span>cocos2d-x/cocos/platform/android/ CCCanvasRenderingContext2D-android.cpp)添加该方法的实现:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```c++</span><br><span class="line">void setWordSpace(float space) &#123;</span><br><span class="line">    JniHelper::callObjectVoidMethod(_obj, JCLS_CANVASIMPL, &quot;setWordSpace&quot;, space);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后在<figure class="highlight plain"><figcaption><span>cocos2d-x/cocos/platform/android/java/src/org/cocos2dx/lib/CanvasRenderingContext2DImpl.java)里添加:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```java</span><br><span class="line">private setWordSpace(float space) &#123;</span><br><span class="line">  	mTextPaint.setLetterSpacing(this.wordSpace);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="二、js绑定"><a href="#二、js绑定" class="headerlink" title="二、js绑定"></a>二、js绑定</h3><ul>
+<li><p>在<figure class="highlight plain"><figcaption><span>cocos2d-x/cocos/scripting/js-bindings/auto/)文件里添加SE_DECLARE_FUNC(js_engine_CanvasRenderingContext2D_setWordSpace);</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在```jsb_cocos2dx_auto.cpp```(目录: cocos2d-x/cocos/scripting/js-bindings/auto/)文件里新添加如下代码:</span><br><span class="line"></span><br><span class="line">  ```c++</span><br><span class="line">  static bool js_engine_CanvasRenderingContext2D_setWordSpace(se::State&amp; s)</span><br><span class="line">  &#123;</span><br><span class="line">      cocos2d::CanvasRenderingContext2D* cobj = (cocos2d::CanvasRenderingContext2D*)s.nativeThisObject();</span><br><span class="line">      SE_PRECONDITION2(cobj, false, &quot;js_engine_CanvasRenderingContext2D_setWordSpace : Invalid Native Object&quot;);</span><br><span class="line">      const auto&amp; args = s.args();</span><br><span class="line">      size_t argc = args.size();</span><br><span class="line">      CC_UNUSED bool ok = true;</span><br><span class="line">      if (argc == 1) &#123;</span><br><span class="line">          float arg0;</span><br><span class="line">          ok &amp;= seval_to_float(args[0], &amp;arg0);</span><br><span class="line">          SE_PRECONDITION2(ok, false, &quot;js_engine_CanvasRenderingContext2D_setWordSpace : Error processing arguments&quot;);</span><br><span class="line">          cobj-&gt;setWordSpace(arg0);</span><br><span class="line">          return true;</span><br><span class="line">      &#125;</span><br><span class="line">      SE_REPORT_ERROR(&quot;wrong number of arguments: %d, was expecting %d&quot;, (int)argc, 1);</span><br><span class="line">      return false;</span><br><span class="line">  &#125;</span><br><span class="line">  SE_BIND_FUNC(js_engine_CanvasRenderingContext2D_setWordSpace)</span><br></pre></td></tr></table></figure></p>
+<p>然后在<figure class="highlight plain"><figcaption><span>js_register_engine_CanvasRenderingContext2D(se::Object* obj)```方法里新增一行:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```  cls-&gt;defineFunction(&quot;setWordSpace&quot;, _SE(js_engine_CanvasRenderingContext2D_setWordSpace));</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>在<figure class="highlight plain"><figcaption><span>cocos2d-x/cocos/scripting/js-bindings/manual/)里新加如下方法：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```c++</span><br><span class="line">static bool js_CanvasRenderingContext2D_setWordSpace(se::State&amp; s)</span><br><span class="line">&#123;</span><br><span class="line">    cocos2d::CanvasRenderingContext2D* cobj = (cocos2d::CanvasRenderingContext2D*)s.nativeThisObject();</span><br><span class="line">    SE_PRECONDITION2(cobj, false, &quot;js_CanvasRenderingContext2D_setWordSpace : Invalid Native Object&quot;);</span><br><span class="line">    const auto&amp; args = s.args();</span><br><span class="line">    size_t argc = args.size();</span><br><span class="line">    CC_UNUSED bool ok = true;</span><br><span class="line">    if (argc == 1) &#123;</span><br><span class="line">        float arg0;</span><br><span class="line">        ok &amp;= seval_to_float(args[0], &amp;arg0);</span><br><span class="line">        SE_PRECONDITION2(ok, false, &quot;js_CanvasRenderingContext2D_setWordSpace : Error processing arguments&quot;);</span><br><span class="line">        cobj-&gt;setWordSpace(arg0);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    SE_REPORT_ERROR(&quot;wrong number of arguments: %d, was expecting %d&quot;, (int)argc, 1);</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br><span class="line">SE_BIND_FUNC(js_CanvasRenderingContext2D_setWordSpace)</span><br></pre></td></tr></table></figure></p>
+<p>然后在该文件的<figure class="highlight plain"><figcaption><span>**bool** register_canvas_context2d(se::Object* obj)```方法里增加一行:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```  __jsb_cocos2d_CanvasRenderingContext2D_proto-&gt;defineFunction(&quot;_setWordSpace&quot;, _SE(js_CanvasRenderingContext2D_setWordSpace));</span><br></pre></td></tr></table></figure></p>
+</li>
+</ul>
+<h3 id="三、完成"><a href="#三、完成" class="headerlink" title="三、完成"></a>三、完成</h3><p>​    在工程设置里选择自定义cocos2d-x引擎即可，如果想在模拟器中预览则需要重新编译模拟器,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 通过 cocos console 生成模拟器</span><br><span class="line">gulp gen-simulator</span><br><span class="line">gulp update-simulator-config</span><br></pre></td></tr></table></figure>
+<p><a href="https://docs.cocos.com/creator/manual/zh/advanced-topics/engine-customization.html" target="_blank" rel="noopener">详情参考官方文档: 引擎定制</a></p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/uploads/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/uploads/wxpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -217,7 +199,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">游戏开发</a>
         		</li>
       		
 		</ul>
@@ -236,18 +218,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/02/22/Hexo-blog-添加置顶功能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo blog 添加置顶功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/02/21/经典排序算法之冒泡排序/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">经典排序算法之冒泡排序</div>
+    <a href="/2021/08/04/vscode直接调试typescript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vscode直接调试typescript</div>
       <i class="icon-circle-right"></i>
     </a>
   
